@@ -1,11 +1,13 @@
 os: osx
-osx_image: xcode10
 language: node_js
 node_js:
   - "8"
+env: 
+  - RUNTIME=node
+  - RUNTIME=electron
 after_success:
   - yarn global add node-pre-gyp node-pre-gyp-github aws-sdk
-  - node-pre-gyp configure
-  - node-pre-gyp build
+  - node-pre-gyp configure --runtime $RUNTIME
+  - node-pre-gyp build --runtime $RUNTIME
   - node-pre-gyp package
   - node-pre-gyp-github publish --release
