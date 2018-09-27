@@ -14,7 +14,7 @@
   },
   "binary": {
     "module_name": "noble_mac_native",
-    "module_path": "./build/",
+    "module_path": "./build/Release/",
     "host": "https://github.com/paulvarache/noble-mac/releases/download/",
     "remote_path": "{version}"
   },
