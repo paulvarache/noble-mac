@@ -12,4 +12,4 @@ install:
   - node-pre-gyp build --runtime=$NODE_RUNTIME --target=$TARGET --dist-url=$DIST_URL
   - node-pre-gyp package --runtime=$NODE_RUNTIME --target=$TARGET --dist-url=$DIST_URL
   - ls build/Release
-  - node-pre-gyp-github publish --release --runtime=$NODE_RUNTIME --target=$TARGET --dist-url=$DIST_URL
+  - node-pre-gyp-github publish --release
