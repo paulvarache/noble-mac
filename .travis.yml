@@ -4,6 +4,6 @@ language: node_js
 node_js:
   - "8"
 after_success:
-  - yarn global add node-pre-gyp aws-sdk
-    node-pre-gyp package
-    node-pre-gyp publish --release
+  - yarn global add node-pre-gyp aws-sdk;
+    node-pre-gyp package;
+    node-pre-gyp publish --release;
