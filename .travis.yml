@@ -3,12 +3,12 @@ language: node_js
 node_js:
   - "8"
 env: 
-  - RUNTIME=node
-  - RUNTIME=electron
+  - RUNTIME=node TARGET=8.0.0
+  - RUNTIME=electron TARGET=2.0.0
 after_success:
   - yarn global add node-pre-gyp node-pre-gyp-github aws-sdk
-  - node-pre-gyp configure --runtime $RUNTIME
-  - node-pre-gyp build --runtime $RUNTIME
+  - node-pre-gyp configure --runtime $RUNTIME --target $TARGET
+  - node-pre-gyp build --runtime $RUNTIME --target $TARGET
   - node-pre-gyp package
-  - tree
+  - ls build/Release
   - node-pre-gyp-github publish --release
