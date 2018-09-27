@@ -10,4 +10,5 @@ after_success:
   - node-pre-gyp configure --runtime $RUNTIME
   - node-pre-gyp build --runtime $RUNTIME
   - node-pre-gyp package
+  - tree
   - node-pre-gyp-github publish --release
