@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - "8.6.0"
 env: 
-  - NODE_RUNTIME=node TARGET=8.0.0
+  - NODE_RUNTIME=node TARGET=8.6.0
   - NODE_RUNTIME=electron TARGET=2.0.0
 install:
   - yarn
