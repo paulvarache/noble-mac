@@ -3,19 +3,21 @@
   "dependencies": {
     "napi-thread-safe-callback": "0.0.6",
     "noble": "^1.9.1",
-    "node-addon-api": "^1.1.0"
+    "node-addon-api": "^1.1.0",
+    "node-pre-gyp": "^0.11.0"
   },
   "engines": {
     "node": ">=6.14.2"
   },
   "scripts": {
     "test": "echo test skipped",
+    "install": "node-pre-gyp install --fallback-to-build",
     "xcode": "node-gyp configure --debug -- -f xcode"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/paulvarache/noble-mac.git"
-  },  
+    "type": "git",
+    "url": "https://github.com/paulvarache/noble-mac.git"
+  },
   "binary": {
     "module_name": "noble_mac_native",
     "module_path": "./build/Release/",
