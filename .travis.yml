@@ -3,3 +3,7 @@ osx_image: xcode10
 language: node_js
 node_js:
   - "8"
+after_success:
+  - yarn global add node-pre-gyp;
+    node-pre-gyp package
+    node-pre-gyp publish --release
