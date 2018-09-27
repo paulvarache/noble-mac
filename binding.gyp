@@ -27,11 +27,11 @@
     {
       "target_name": "action_after_build",
       "type": "none",
-      "dependencies": [ "noble_mac_native" ],
+      "dependencies": [ "<(module_name)" ],
       "copies": [
         {
-          "files": [ "<(PRODUCT_DIR)/noble_mac_native.node" ],
-          "destination": "build/<(CONFIGURATION_NAME)"
+          "files": [ "<(PRODUCT_DIR)/<(module_name).node" ],
+          "destination": "<(module_path)"
         },
       ]
     }
