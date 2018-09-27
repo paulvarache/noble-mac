@@ -11,6 +11,5 @@ install:
   - node-pre-gyp configure --runtime=$NODE_RUNTIME --target=$TARGET --dist-url=$DIST_URL
   - node-pre-gyp build --runtime=$NODE_RUNTIME --target=$TARGET --dist-url=$DIST_URL
   - node-pre-gyp package --runtime=$NODE_RUNTIME --target=$TARGET --dist-url=$DIST_URL
-  - ls -lah build/Release
-  - ls -lah build
+  - ls -lah lib/binding
   - node-pre-gyp-github publish --release
