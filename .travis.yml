@@ -6,11 +6,10 @@ env:
   - NODE_RUNTIME=node TARGET=8.0.0
   - NODE_RUNTIME=electron TARGET=2.0.0
 install:
-  - echo $NODE_RUNTIME
   - yarn
   - yarn global add node-pre-gyp node-pre-gyp-github aws-sdk
-  - node-pre-gyp configure --runtime $NODE_RUNTIME --target $TARGET
-  - node-pre-gyp build --runtime $NODE_RUNTIME --target $TARGET
+  - node-pre-gyp configure --runtime=$NODE_RUNTIME --target=$TARGET
+  - node-pre-gyp build --runtime=$NODE_RUNTIME --target=$TARGET
   - node-pre-gyp package
   - ls build/Release
   - node-pre-gyp-github publish --release
