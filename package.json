@@ -12,6 +12,12 @@
     "test": "echo test skipped",
     "xcode": "node-gyp configure --debug -- -f xcode"
   },
+  "binary": {
+    "module_name": "noble_mac_native",
+    "module_path": "./build/",
+    "host": "https://github.com/paulvarache/noble-mac/releases/download/",
+    "remote_path": "{version}"
+  },
   "gypfile": true,
   "name": "noble-mac",
   "version": "0.0.1",
